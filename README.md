@@ -1,4 +1,4 @@
-# PSPD - 2022/2 - Laboratório 2 (KAFKA)
+# PSPD - 2022/2 - Laboratório 2 (RabbitMQ)
 
 ## Integrantes
  - Felipe Correia Andrade  - 180013259
