@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import pika
 import uuid
+import cont
 
 
 class FibonacciRpcClient(object):
@@ -36,13 +37,13 @@ class FibonacciRpcClient(object):
                 reply_to=self.callback_queue,
                 correlation_id=self.corr_id,
             ),
-            body=str(n))
+            body=n)
         self.connection.process_data_events(time_limit=None)
-        return int(self.response)
+        return self.response
 
 
 fibonacci_rpc = FibonacciRpcClient()
-
-print(" [x] Requesting fib(30)")
-response = fibonacci_rpc.call(30)
-print(" [.] Got %r" % response)
+file = open('file.txt', 'r')
+response = fibonacci_rpc.call(file.read())
+file.close()
+cont.ContWord(response)
