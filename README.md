@@ -6,5 +6,7 @@
 
 ## Execução
 
-## Utilização
+Executar o arquivo cont_server.py
+
+Depois executar o arquivo cont_client.py
 
